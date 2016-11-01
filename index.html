@@ -77,13 +77,15 @@
                 //mesh.position.x = 0;
                 //mesh.position.y = 0;
                 //mesh.position.z = 500;
+                //mesh.rotation.x = 0.1;
+                //mesh.rotation.z = -0.1;
                 scene.add( mesh );
             } );
 
 
             //光源 --------------------------------------------------
             light = new THREE.PointLight( 0xffffff, 1 );
-            light.position.set( 800, 0, 800 );
+            light.position.set( 800, -400, 800 );
             scene.add( light );
 
             //lightHelper = new THREE.SpotLightHelper( light );
