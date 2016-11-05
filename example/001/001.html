@@ -1,0 +1,51 @@
+<style>
+	.exp1 {
+		width: 500px;
+		height: 350px;
+		background-color: #c3c3c3;
+		margin: 20px auto;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transform-origin: 50% 50% -300px;
+		transform-origin: 50% 50% -300px;
+	}
+	
+	.exp1.ng-hide {}
+	
+	.exp1.ng-hide-add {
+		animation: fly .5s ease-in-out backwards;
+		animation-direction: reverse;
+	}
+	
+	.exp1.ng-hide-remove {
+		animation: fly .5s ease-in-out forwards;
+	}
+	
+	@-webkit-keyframes fly {
+		0% {
+			opacity: 0;
+			-webkit-transform: rotateX(-180deg);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: rotateX(0deg);
+		}
+	}
+	
+	@keyframes fly {
+		0% {
+			opacity: 0;
+			-webkit-transform: rotateX(-180deg);
+			transform: rotateX(-180deg);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: rotateX(0deg);
+			transform: rotateX(0deg);
+		}
+	}
+</style>
+
+<h1>001 {{title}}</h1>
+<a href="javascript:void(0);" ng-click="show=!show">显示/隐藏</a>
+<div class="exp1" ng-show="show"></div>

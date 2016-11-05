@@ -37,7 +37,7 @@
             "name": "chrome Launch localhost:3000",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:3000/index.html",
+            "url": "http://localhost:3000/",
             "webRoot": "${workspaceRoot}/app/files",
             "sourceMaps": true
         }
