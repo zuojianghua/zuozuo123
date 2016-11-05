@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "Launch",
-            "type": "node2",
+            "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/app.js",
+            "program": "${workspaceRoot}/index.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
@@ -23,7 +23,7 @@
         },
         {
             "name": "Attach",
-            "type": "node2",
+            "type": "node",
             "request": "attach",
             "port": 9229,
             "address": "localhost",
@@ -32,6 +32,14 @@
             "outFiles": [],
             "localRoot": "${workspaceRoot}",
             "remoteRoot": null
+        },
+        {
+            "name": "chrome Launch localhost:3000",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/index.html",
+            "webRoot": "${workspaceRoot}/app/files",
+            "sourceMaps": true
         }
     ]
 }
