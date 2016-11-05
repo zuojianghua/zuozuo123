@@ -1,5 +1,5 @@
-var Ctrl002 = ['$rootScope', '$scope', 'draw2d',
-    function ($rootScope, $scope, draw2d) {
+var Ctrl002 = ['$rootScope', '$scope',
+    function ($rootScope, $scope) {
         $scope.title = 'Draw2D流程设计';
 
 
@@ -7,8 +7,9 @@ var Ctrl002 = ['$rootScope', '$scope', 'draw2d',
             var wf = new draw2d.Canvas("workflow_content");
         }
 
-        //$scope.create_workflow();
+        $scope.create_workflow();
 
+        //$scope.fl01 = ;
 
     }];
-Ctrl002.$injector = ['$rootScope', '$scope', 'draw2d'];
+Ctrl002.$injector = ['$rootScope', '$scope'];
