@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>zuozuo123</title>
+    
+    <script src="../../bower_components/jquery/jquery.min.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/ngDraggable/ngDraggable.js"></script>
+    
+    <script>
+        var app = angular.module('app', ['ngDraggable']);
+        app.controller('MainCtrl', function ($scope) {
+            $scope.draglist = [
+                {name:'1',data:'a'},
+                {name:'2',data:'b'},
+                {name:'3',data:'c'}
+            ];
+            $scope.onDragComplete=function(data,evt){
+                console.log("drag success, data:", data);
+            }
+            $scope.onDropComplete=function(data,evt){
+                console.log("drop success, data:", data);
+            }
+        });
+    </script>
+    
+	<style>
+		body {color: #808080;font-family: Monospace;font-size: 13px; text-align: center;background-color: #ffffff;margin: 0px;overflow: hidden;}
+	</style>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="MainCtrl">
+        <div ng-repeat="obj in draglist" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragComplete($data,$event)" ng-center-anchor="true" style="border:1px solid #f3f3f3; width:200px; height:200px; display:inline-block;">
+            {{obj.name}}
+        </div>
+        <hr>
+        <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="width:800px; height:500px; border:1px solid #ccc;" >
+            Drop area
+        </div>
+    </div>
+</body>
+
+</html>

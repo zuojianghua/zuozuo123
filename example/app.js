@@ -2,6 +2,7 @@ angular.module('myApp', [
     'ngAnimate',
     'ui.router',
     'ngDraggable',
+    'ngDialog',
     'draw2d'
 ]).config(function ($stateProvider) {
     $stateProvider.state({
@@ -19,5 +20,12 @@ angular.module('myApp', [
         url:'/002',
         templateUrl:'example/002/002.html',
         controller:Ctrl002
+    });
+
+    $stateProvider.state({
+        name:'003',
+        url:'/003',
+        templateUrl:'example/003/003.html',
+        controller:Ctrl003
     });
 });

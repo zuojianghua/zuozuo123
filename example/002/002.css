@@ -1,0 +1,7 @@
+.component { list-style: none; z-index: 9999;}
+.component li {width:50px; height:50px; display:inline-block; border: 1px dashed #ccc; border-radius: 5px; margin: 5px; cursor: move; background-color: #f3f3f3;}
+.component li div{line-height: 40px; text-align: center;}
+.wf_content{width: 98%; height: 300px; margin: 5px auto; border: 1px solid #f3f3f3;}
+
+
+.palette_node_element{width:50px; height:50px; display:inline-block; text-align: center; line-height: 50px; border: 1px dashed #ccc; border-radius: 5px; margin: 5px; cursor: move; background-color: #f3f3f3;}

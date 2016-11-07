@@ -1,0 +1,17 @@
+<h1>003 {{title}}</h1>
+<div style="width:98%;margin:5px auto;">
+    <a href="javascript:void(0);" ng-click="editor.undo();">撤销</a>
+    <a href="javascript:void(0);" ng-click="editor.redo();">重做</a>
+    <a href="javascript:void(0);" ng-click="editor.delete();">删除</a>
+    <a href="javascript:void(0);" ng-click="editor.console();">查看数据</a>
+
+    <div id="palettePane" draw2d-palette style="z-index:99999;"></div>
+</div>
+
+<div id="canvas" class="wf_content" draw2d-canvas></div>
+
+<hr>
+<h3>节点数据:</h3>
+{{task_data}}
+<h3>连线数据:</h3>
+{{line_data}}
