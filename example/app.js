@@ -1,6 +1,7 @@
 angular.module('myApp', [
     'ngAnimate',
     'ui.router',
+    'ngDraggable',
     'draw2d'
 ]).config(function ($stateProvider) {
     $stateProvider.state({
