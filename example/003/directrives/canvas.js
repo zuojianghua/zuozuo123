@@ -73,7 +73,7 @@ d2.directive("draw2dCanvas", ["$window", "$parse", "$timeout", 'ngDialog',functi
                 if(node.output)
                     task_node.createPort("output", new draw2d.layout.locator.RightLocator());
                 //创建标签
-                //task_node.add(new draw2d.shape.basic.Label({text: node.name}), new draw2d.layout.locator.BottomLocator());
+                task_node.add(new draw2d.shape.basic.Label({text: node.name}), new draw2d.layout.locator.BottomLocator());
                 //绑定事件
                 task_node.onDoubleClick = function(figure, mouseX, mouseY, shiftKey, ctrlKey){
                     //console.log(task_node);
@@ -81,7 +81,6 @@ d2.directive("draw2dCanvas", ["$window", "$parse", "$timeout", 'ngDialog',functi
                 }
 
                 add_command.execute = function(){
-                    
                     canvas.add(task_node, x, y);
                     return task_node;
                 }
